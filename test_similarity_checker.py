@@ -13,3 +13,7 @@ class TestSimilarityCheck(TestCase):
             self.checker.check("", "")
         except TypeError:
             pass
+
+    def test_same_length_strings(self):
+        result = self.checker.check("abc", "def")
+        self.assertEqual(result, 60)
