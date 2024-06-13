@@ -7,3 +7,7 @@ class SimilarityCheck:
     def check_alphabet(self, A, B):
         if not len(A) or not len(B):
             raise TypeError
+        A_set = set(A)
+        B_set = set(B)
+        if not len(A_set - B_set) and not len(B_set - A_set):
+            return 40

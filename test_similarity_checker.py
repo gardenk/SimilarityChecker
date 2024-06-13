@@ -13,3 +13,6 @@ class TestSimilarityCheck(TestCase):
             self.checker.check("", "")
         except TypeError:
             pass
+
+    def test_same_alpha_strings(self):
+        self.assertEqual(self.checker.check("ASD", "DSA"), 40)
