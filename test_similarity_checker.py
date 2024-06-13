@@ -21,3 +21,6 @@ class TestSimilarityCheck(TestCase):
 
     def test_all_different_strings(self):
         self.assertEqual(self.checker.check("A", "BB"), 0)
+
+    def test_partially_different_strings(self):
+        self.assertEqual(self.checker.check("AA", "AAE"), 20)
