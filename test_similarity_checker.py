@@ -1,6 +1,15 @@
 from unittest import TestCase
 
+from similarity_checker import SimilarityCheck
+
 
 class TestSimilarityCheck(TestCase):
-    def test_check(self):
-        self.fail()
+    def setUp(self):
+        super().setUp()
+        self.checker = SimilarityCheck()
+
+    def test_none_strings(self):
+        try:
+            self.checker.check("", "")
+        except TypeError:
+            pass
