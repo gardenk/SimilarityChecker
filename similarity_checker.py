@@ -5,8 +5,5 @@ class SimilarityCheck:
         if not len(A) or not len(B):
             raise TypeError
 
-        if len(A) == len(B):
-            return self.MAX_LENGTH_SCORE
-
-        elif len(A) > len(B):
+        if len(A) >= len(B):
             return max(60 - 60*(len(A) - len(B))/len(B), 0)
