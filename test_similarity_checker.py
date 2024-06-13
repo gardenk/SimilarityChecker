@@ -17,3 +17,6 @@ class TestSimilarityCheck(TestCase):
     def test_same_alpha_strings(self):
         self.assertEqual(self.checker.check("ASD", "DSA"), 40)
         self.assertEqual(self.checker.check("ASD", "asd"), 40)
+
+    def test_all_different_strings(self):
+        self.assertEqual(self.checker.check("A", "BB"), 0)

@@ -12,5 +12,9 @@ class SimilarityCheck:
         A, B = A.lower(), B.lower()
         A_set = set(A)
         B_set = set(B)
-        if not len(A_set - B_set) and not len(B_set - A_set):
+        total_set = A_set | B_set
+        union_set = A_set & B_set
+        if union_set == total_set:
             return self.MAX_ALPHA_SCORE
+        else:
+            return 40*(len(union_set) / len(total_set))
