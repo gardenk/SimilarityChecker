@@ -7,3 +7,5 @@ class SimilarityCheck:
 
         if len(A) >= len(B):
             return max(60 - 60*(len(A) - len(B))/len(B), 0)
+        else:
+            return max(60 - 60 * (len(B) - len(A)) / len(A), 0)
