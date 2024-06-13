@@ -14,4 +14,5 @@ class SimilarityCheck:
         B_set = set(B)
         total_set = A_set | B_set
         union_set = A_set & B_set
-        return 40*(len(union_set) / len(total_set))
+
+        return self.MAX_ALPHA_SCORE*(len(union_set) / len(total_set))
