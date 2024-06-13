@@ -8,4 +8,5 @@ class SimilarityCheck:
         if len(A) == len(B):
             return self.MAX_LENGTH_SCORE
 
-
+        elif len(A) > len(B):
+            return 60 - 60*(len(A) - len(B))/len(B)

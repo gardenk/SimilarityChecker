@@ -15,5 +15,7 @@ class TestSimilarityCheck(TestCase):
             pass
 
     def test_same_length_strings(self):
-        result = self.checker.check("abc", "def")
-        self.assertEqual(result, 60)
+        self.assertEqual(self.checker.check("abc", "def"), 60)
+
+    def test_A_longer_than_B(self):
+        self.assertEqual(self.checker.check("abcde", "def"), 20)
