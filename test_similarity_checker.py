@@ -19,3 +19,4 @@ class TestSimilarityCheck(TestCase):
 
     def test_A_longer_than_B(self):
         self.assertEqual(self.checker.check("abcde", "def"), 20)
+        self.assertEqual(self.checker.check("abcdefg", "def"), 0)
