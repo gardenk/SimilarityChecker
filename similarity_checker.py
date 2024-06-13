@@ -1,4 +1,6 @@
 class SimilarityCheck:
+    def __init__(self):
+        self.MAX_ALPHA_SCORE = 40
     def check(self, A, B):
         length_score = 0
         alpha_score = self.check_alphabet(A, B)
@@ -10,4 +12,4 @@ class SimilarityCheck:
         A_set = set(A)
         B_set = set(B)
         if not len(A_set - B_set) and not len(B_set - A_set):
-            return 40
+            return self.MAX_ALPHA_SCORE
